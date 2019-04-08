@@ -282,7 +282,7 @@ public class Board implements Cloneable
                             if(!Main.f.c.board.thinking)
                             {
                                 Main.f.c.board.thinking=true;
-                                Main.f.c.board=makeMove(AI.getAIMove(Main.f.c.board, Main.f.AILevel[turn?0:1], !turn));
+                                Main.f.c.board=makeMove(AI.getAIMove(Main.f.c.board, Main.f.AILevel[turn?0:1], !turn)).deep_clone();
                                 Main.f.c.board.thinking=false;
                             }
                         }
