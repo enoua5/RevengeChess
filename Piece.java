@@ -25,6 +25,7 @@ public abstract class Piece implements Cloneable
         Piece p=(Piece)this.clone();
         if(pos!=null)
             p.pos=new Point(pos.x, pos.y);
+        p.kills=p.kills.clone();
         for(int i=0; i<p.kills.length; i++)
             p.kills[i]=p.kills[i].deep_clone();
         return p;

@@ -365,8 +365,8 @@ public class Board implements Cloneable
         for(int ix=0; ix<8; ix++)
         for(int iy=0; iy<8; iy++)
         {
-            b.prevState[ix][iy]=b.idontactuallyknowwhatimdoing[ix][iy];
-            b.idontactuallyknowwhatimdoing[ix][iy]=b.state[ix][iy];
+            b.prevState[ix][iy]=b.idontactuallyknowwhatimdoing[ix][iy].deep_clone();
+            b.idontactuallyknowwhatimdoing[ix][iy]=b.state[ix][iy].deep_clone();
         }
         
         b.checkWin();
