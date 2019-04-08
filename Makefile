@@ -2,3 +2,4 @@ rc.jar: AI.java Bishop.java Board.java build Canvas.java Context.java Empty.java
 	javac Main.java
 	jar -cvfm build/rc.jar manifest.txt *.class
 	rm *.class
+	sudo chmod +x build/rc.jar
