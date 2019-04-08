@@ -291,7 +291,7 @@ public class AI
         if(depth<=0)
             return static_eval(b);
         if(b.winner!=-1)
-            return static_eval(b)+(int)((depth*1.1)*(b.winner==0?-10000:10000));
+            return static_eval(b)+(int)((depth*1.1)*(b.winner==0?10000:-10000));
         
         if(maximizingPlayer)
         {
